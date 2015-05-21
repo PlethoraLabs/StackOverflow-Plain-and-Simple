@@ -1,0 +1,28 @@
+{
+  "name": "StackOverflow Over-Simplifier",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "Oversimplifies Stackoverflow answer pages by removing everything except the main question and the answers.",
+  "homepage_url": "http://plethorathemes.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://stackoverflow.com/*",
+        "https://stackoverflow.com/*"
+      ],
+      "js": [
+        "js/jquery/jquery.min.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
